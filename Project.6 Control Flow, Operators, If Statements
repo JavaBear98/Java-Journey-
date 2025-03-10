@@ -1,0 +1,64 @@
+# Initialize the scores for each house
+gryffindor_score = 0
+ravenclaw_score = 0
+hufflepuff_score = 0
+slytherin_score = 0
+
+# 1st Question
+print("Do you like Dawn or Dusk?")
+answer = int(input("Please enter 1 for Dawn or 2 for Dusk: "))  # Clear instruction for the user
+
+if answer == 1:
+    gryffindor_score += 1
+    ravenclaw_score += 1
+elif answer == 2:
+    hufflepuff_score += 1
+    slytherin_score += 1
+else:
+    print("Wrong input.")
+
+# 2nd Question
+print("When I'm dead, I want people to remember me as:")
+answer = int(input("Please enter 1 for The Good, 2 for The Great, 3 for The Wise, or 4 for The Bold: "))
+
+if answer == 1:
+    hufflepuff_score += 2
+elif answer == 2:
+    slytherin_score += 2
+elif answer == 3:
+    ravenclaw_score += 2
+elif answer == 4:
+    gryffindor_score += 2
+else:
+    print("Wrong input.")
+
+# 3rd Question
+print("Which kind of instrument most pleases your ear?")
+answer = int(input("Please enter 1 for Violin, 2 for Trumpet, 3 for Piano, or 4 for Drum: "))
+
+if answer == 1:
+    slytherin_score += 4
+elif answer == 2:
+    hufflepuff_score += 4
+elif answer == 3:
+    ravenclaw_score += 4
+elif answer == 4:
+    gryffindor_score += 4
+else:
+    print("Wrong input.")
+
+# Print the final scores
+answer = input("Are you ready for the final score? (yes/no): ").lower()
+if answer == "yes":
+    print("Great! Let's keep going.")
+elif answer == "no":
+    print("That's okay! Everyone has their own interests. However you will still see the results.")
+else:
+    print("Please answer with 'yes' or 'no'.")
+print("\nFinal Scores:")
+print(f"Gryffindor: {gryffindor_score}")
+print(f"Ravenclaw: {ravenclaw_score}")
+print(f"Hufflepuff: {hufflepuff_score}")
+print(f"Slytherin: {slytherin_score}")
+
+
