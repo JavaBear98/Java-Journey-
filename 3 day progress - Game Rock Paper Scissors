@@ -1,0 +1,63 @@
+import random
+print("Let's play rock paper scissors")
+#Name the 2 players
+player = input("What's your name?")
+computer = "Computer"
+#Assign symbols for the game
+rock = "✊"
+paper = "✋"
+scissors = "✌"
+
+# Map numbers to their respective symbols
+rock_choice = 1
+paper_choice = 2
+scissors_choice = 3
+
+#Get player input
+player_choice = int(input("Please choose between 1 for rock, 2 for paper, 3 for scissors "))
+
+#Computer's choice
+computer_choice = random.randint(1,3)
+print(f"Your oponent chose {computer_choice}")
+
+#Convert player choice into symbols
+if player_choice == rock_choice:
+ player_symbol = rock 
+elif player_choice == paper_choice:
+ player_symbol = paper
+elif player_choice == scissors_choice:
+ player_symbol = scissors
+else:
+  print("Invalid Choice")
+
+  #Convert computer choice into symbols
+if computer_choice == rock_choice:
+ computer_symbol = rock
+elif computer_choice == paper_choice:
+ computer_symbol = paper
+elif computer_choice == scissors_choice:
+ computer_symbol = scissors
+
+#Display the choices
+print(f"Player choose: {player_symbol}") 
+print(f"Computer chooses: {computer_symbol}")
+
+#Choices
+if computer_choice == rock_choice and player_choice == rock_choice:
+  print("It's a tie")
+elif computer_choice == paper_choice and player_choice == paper_choice:
+  print("It's a tie")
+elif computer_choice == scissors_choice and player_choice == scissors_choice:
+  print("It's a tie")
+elif computer_choice == rock_choice and player_choice == paper_choice:
+  print(f"{player} wins")
+elif computer_choice == rock_choice and player_choice == scissors_choice:
+  print("The computer wins! Hehe 😊 Nice try tho!")
+elif computer_choice == paper_choice and player_choice == scissors_choice:
+  print(f"{player} wins")
+elif computer_choice == paper_choice and player_choice == rock_choice:
+  print(f"{player} wins")
+elif computer_choice == scissors_choice and player_choice == paper_choice:
+  print("The computer wins! Hehe 😊 Nice try tho!")
+elif computer_choice == scissors_choice and player_choice == rock_choice:
+  print(f"{player} wins")
